@@ -1,0 +1,223 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Netflix Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+}
+:root{
+  --black1: #000000;
+  --grayback: #141414;
+  --red1: #E50914;
+}
+body{
+  background-color: var(--grayback);
+}
+::-webkit-scrollbar{
+  width: 7px;
+  background-color: #111;
+}
+::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 10px;
+}
+#logonetflix{
+  height: 1.9rem;
+}
+#userAvatar{
+  height: 1.9rem;
+  border-radius: 3px;
+}
+nav {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+nav.sticky{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgb(34, 34, 34));
+}
+.leftRow,.rightRow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightRow img{
+  padding-right:1.5rem;
+}
+.mainMenu li{
+  float: left;
+  margin-left: 1rem;
+}
+.mainMenu li a:hover{
+  color: #808080;
+}
+nav .openMenu {
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+.openMenu i{
+  font-size: 25px;
+}
+nav .mainMenu .closeMenu , .icons i {
+  display: none;
+  cursor: pointer;
+}
+
+.fa-facebook:hover {color: rgb(0, 110, 255);}
+.fa-linkedin-in:hover {color: rgb(86, 154, 243);}
+.fa-instagram:hover {color: rgb(255, 0, 191)}
+.fa-github:hover {color: rgb(255, 123, 0);}
+
+@media(max-width: 800px){
+  nav .mainMenu{
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      transition: top 1s ease;
+      display: none;
+  }
+
+  nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+  }
+  nav .openMenu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 50%;
+      left: 50%;
+  }
+  nav .mainMenu li{
+    padding-bottom: 2rem;
+  }
+  nav .mainMenu li:first-child{
+    padding-top: 2rem;
+  }
+  nav .mainMenu li a{
+    font-size: 3rem;
+  }
+  nav .mainMenu li a:hover {
+      font-size: 4rem;
+      color: white;
+      background-color: var(--red1);
+      border-radius: 25px;
+      padding: 1rem;
+  }
+  .icons i{
+      display: inline-block;
+      padding: 2.5rem;
+      font-size: 2.5rem;
+     
+  }
+}
+
+#banner{
+  object-fit: contain;
+  height: 98vh;
+  background-position: center center ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+#banner__contents{
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#banner__title{
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+#banner__description{
+  width: 45rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  max-width: 360px;
+
+}
+
+#banner__button{
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: .2vw;
+  margin: 1rem 1rem 1rem 0;
+  background-color: rgba(51,51,51,.5);
+  padding: 1rem 2rem;
+}
+#banner__button:hover{
+  color: black;
+  background-color: #e6e6e6;
+  transition: all .3s;
+}
+#banner__fadeBottom{
+  height: 7.4rem;
+  background: linear-gradient(to bottom,transparent, rgba(37,37,37, .61), rgb(0, 0, 0));
+}
+
+.row{
+  margin-left: 20px;
+  color: white;
+}
+.row__poster{
+  object-fit: contain;
+  width: 100%;
+  max-height: 120px;
+  margin-right: 10px;
+  transition: transform 500ms;
+}
+.row__posters::-webkit-scrollbar{
+  display: none;
+}
+.row__posters{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  
+}
+.row__poster:hover{
+  transform: scale(1.08);
+}
+.row__posterLarge, 
+.row__posterLarge1,
+.row__posterLarge2{
+  object-fit: contain;
+  width: 100%;
+  max-height: 250px;
+  margin-right: 10px;
+  transition: transform 500ms;
+
+}
+.row__posterLarge:hover,
+.row__posterLarge1:hover,
+.row__posterLarge2:hover{
+  transform: scale(1.09);
+  opacity: 1;
+
+}

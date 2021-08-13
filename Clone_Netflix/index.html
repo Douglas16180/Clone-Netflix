@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="schortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <div class="leftRow">
+        <img id="logonetflix" src="./img/logo.svg" alt="Logo">
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+          <ul class="mainMenu">
+              <li><a href="#">Início</a></li>
+              <li><a href="#">Séries</a></li>
+              <li><a href="#">Filmes</a></li>
+              <li><a href="#">Bombando</a></li>
+              <li><a href="#">Minha lista</a></li>
+              <div class="closeMenu"><i class="fa fa-times"></i></div>
+              <span class="icons">
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-github"></i>
+              </span>
+          </ul>  
+      </div>
+      <div class="rightRow">
+        <img src="./img/search.svg" alt="Pesquisar">
+        <img src="./img/bell.svg" alt="Notificação">
+        <img id="userAvatar" src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png" alt="User">
+      </div>
+    </nav>
+    <header id="banner">
+      <div id="banner__contents">
+        <h1 id="banner__title"></h1>
+        <div id="banner__buttons">
+        <button id="banner__button">Play</button>
+        <button id="banner__button">Minha Lista</button>
+      </div>
+      <p id="banner__description"></p>
+      </div>
+      <div id="banner__fadeBottom"></div>
+    </header>
+
+    <div id="headrow">
+      <div class="row">
+        <h2 class="row__title"></h2>
+        <div class="row__posters"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+  <!--
+    🚀
+      Dev: 'Douglas Santos';
+      linkedin: 'https://www.linkedin.com/in/douglassantosdesenvolvimentodesistemas/';
+      Github: 'https://github.com/Douglas16180';
+    🚀
+  -->
+</html>
